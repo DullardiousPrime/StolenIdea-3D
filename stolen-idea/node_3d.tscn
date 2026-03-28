@@ -21,9 +21,6 @@ mesh = SubResource("BoxMesh_4xowi")
 transform = Transform3D(22.036228, 0, 0, 0, 0.23287645, 0, 0, 0, 23.887896, -0.022692919, -0.011835203, 0)
 shape = SubResource("ConcavePolygonShape3D_a202f")
 
-[node name="XRCamera3D" type="XRCamera3D" parent="." unique_id=976987110]
-transform = Transform3D(-0.9986254, 0.009210838, -0.051598113, -0.010122773, 0.93201077, 0.36228934, 0.05142698, 0.36231366, -0.9306364, -0.5257301, 14.852789, -38.518658)
-
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1164898964]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.400826, 58.12983, 0)
 light_energy = 2.603
@@ -46,4 +43,4 @@ transform = Transform3D(2.7571843, 0, 3.352489, 0, 5.456345, 0, -2.92452, 0, 4.2
 mesh = SubResource("BoxMesh_a202f")
 
 [node name="player" parent="." unique_id=844637566 instance=ExtResource("1_a202f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07910037, 0.6046033, -0.008379459)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07910037, 0.58500814, -0.008379459)
