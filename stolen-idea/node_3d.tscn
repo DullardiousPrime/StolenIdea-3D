@@ -7,6 +7,8 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 
 [sub_resource type="BoxMesh" id="BoxMesh_a202f"]
 
+[sub_resource type="PrismMesh" id="PrismMesh_4xowi"]
+
 [node name="Node3D" type="Node3D" unique_id=1403922108]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1489380716]
@@ -27,6 +29,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.400826, 58.12983, 0)
 light_energy = 2.603
 light_size = 24.335
 light_specular = 21.94
+shadow_enabled = true
+shadow_bias = 1.0
+shadow_transmittance_bias = -8.71
+shadow_blur = 0.0
 omni_range = 311.64108
 
 [node name="Block Deco thing" type="StaticBody3D" parent="." unique_id=1638879273]
@@ -36,9 +42,18 @@ transform = Transform3D(1.5749727, 0, 1.0583723, 0, 1, 0, -0.6054271, 0, 2.75327
 mesh = SubResource("BoxMesh_a202f")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Block Deco thing" unique_id=62441171]
-transform = Transform3D(-3.6010606, 0, -3.5154133, 0, 11.424564, 0, -1.547884, 0, 5.664752, 16.237457, 5.7852445, -5.053343)
+transform = Transform3D(-3.6010606, 0, -3.5154133, 0, 11.424564, 0, -1.547884, 0, 5.664752, 15.926867, 5.7852445, -5.186847)
 mesh = SubResource("BoxMesh_a202f")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Block Deco thing" unique_id=567977849]
-transform = Transform3D(2.7571843, 0, 3.352489, 0, 5.456345, 0, -2.92452, 0, 4.2718678, -6.1886673, 2.8700504, 8.18203)
+transform = Transform3D(2.7571843, 0, 3.352489, 0, 5.456345, 0, -2.92452, 0, 4.2718678, -6.1886673, 2.5433922, 8.18203)
 mesh = SubResource("BoxMesh_a202f")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Block Deco thing" unique_id=1465238907]
+transform = Transform3D(-8.109102, 0, -4.6515627, 0, 6.43192, 0, 12.01093, 0, -3.1404724, -18.11967, 3.4313762, -6.9092975)
+cast_shadow = 2
+mesh = SubResource("PrismMesh_4xowi")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Block Deco thing/MeshInstance3D5" unique_id=1006183452]
+transform = Transform3D(-1.0341873, -0.0027478754, 0, 0.019839736, -0.99997365, 0, 0, 0, 1, 0.51149154, -0.020377815, -0.0021924973)
+mesh = SubResource("PrismMesh_4xowi")
