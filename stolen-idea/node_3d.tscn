@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://b6gc7f38qxvno"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4xowi"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_a202f"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a202f"]
+
+[node name="Node3D" type="Node3D" unique_id=1403922108]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1489380716]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=708694378]
+transform = Transform3D(55.83329, 0, 0, 0, 0.23287605, 0, 0, 0, 65.46629, -0.021495104, -0.011835203, -0.13732243)
+mesh = SubResource("BoxMesh_4xowi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1694502623]
+transform = Transform3D(22.036228, 0, 0, 0, 0.23287645, 0, 0, 0, 23.887896, -0.022692919, -0.011835203, 0)
+shape = SubResource("ConcavePolygonShape3D_a202f")
+
+[node name="XRCamera3D" type="XRCamera3D" parent="." unique_id=976987110]
+transform = Transform3D(-0.9986254, 0.009210838, -0.051598113, -0.010122773, 0.93201077, 0.36228934, 0.05142698, 0.36231366, -0.9306364, -0.5257301, 14.852789, -38.518658)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1164898964]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.400826, 58.12983, 0)
+light_energy = 2.603
+light_size = 24.335
+light_specular = 21.94
+omni_range = 311.64108
+
+[node name="Block Deco thing" type="StaticBody3D" parent="." unique_id=1638879273]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Block Deco thing" unique_id=249298888]
+transform = Transform3D(1.5749727, 0, 1.0583723, 0, 1, 0, -0.6054271, 0, 2.7532752, 2.3921337, 0.5917697, -0.91954786)
+mesh = SubResource("BoxMesh_a202f")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Block Deco thing" unique_id=62441171]
+transform = Transform3D(-3.6010606, 0, -3.5154133, 0, 11.424564, 0, -1.547884, 0, 5.664752, 16.237457, 5.7852445, -5.053343)
+mesh = SubResource("BoxMesh_a202f")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Block Deco thing" unique_id=567977849]
+transform = Transform3D(2.7571843, 0, 3.352489, 0, 5.456345, 0, -2.92452, 0, 4.2718678, -6.1886673, 2.8700504, 8.18203)
+mesh = SubResource("BoxMesh_a202f")
