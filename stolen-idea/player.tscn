@@ -8,6 +8,7 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_4flbx"]
 
 [node name="player" type="RigidBody3D" unique_id=1299348544]
+mass = 1.5
 script = ExtResource("1_mvxmr")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=526288030]
