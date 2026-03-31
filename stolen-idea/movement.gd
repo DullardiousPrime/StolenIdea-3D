@@ -12,5 +12,7 @@ func _physics_process(_delta: float) -> void:
 	
 	if direction:
 		print(direction)
-		apply_impulse(direction * ACC * Vector3(1,0,1).normalized())
+		move(direction, ACC)
 	
+func move(direction, speed):
+	apply_impulse(direction * speed * Vector3(1,0,1).normalized())

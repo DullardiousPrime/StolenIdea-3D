@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://cb388aytv0pyp"]
 
 [ext_resource type="Script" uid="uid://eg18fftxpt1j" path="res://movement.gd" id="1_mvxmr"]
+[ext_resource type="Texture2D" uid="uid://dt3tclfifjx44" path="res://Texturelabs_Paper_315M.jpg" id="2_hqtel"]
 [ext_resource type="Script" uid="uid://dkfnm202rhj5i" path="res://playercam.gd" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://cilisww5alowt" path="res://PNG/Outline/crosshair002.png" id="3_i3pqv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sweqy"]
+albedo_texture = ExtResource("2_hqtel")
 
 [sub_resource type="SphereMesh" id="SphereMesh_n1c64"]
 
@@ -12,6 +17,7 @@ mass = 1.5
 script = ExtResource("1_mvxmr")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=526288030]
+material_override = SubResource("StandardMaterial3D_sweqy")
 mesh = SubResource("SphereMesh_n1c64")
 
 [node name="camAnchor" type="Node3D" parent="." unique_id=1880620439]
@@ -19,8 +25,12 @@ top_level = true
 script = ExtResource("2_onrkg")
 
 [node name="Camera3D" type="Camera3D" parent="camAnchor" unique_id=920157790]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.25, 5)
 current = true
+
+[node name="aimcast" type="RayCast3D" parent="camAnchor/Camera3D" unique_id=1426616740]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.9999999, 0, 0.9999999, -4.3711385e-08, 0, 0, 0)
+target_position = Vector3(0, -100, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=155482863]
 shape = SubResource("SphereShape3D_4flbx")
@@ -28,3 +38,27 @@ shape = SubResource("SphereShape3D_4flbx")
 [node name="RemoteTransform3D" type="RemoteTransform3D" parent="." unique_id=1813488670]
 remote_path = NodePath("../camAnchor")
 update_rotation = false
+
+[node name="Crosshair" type="Control" parent="." unique_id=1239660867]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Crosshair" unique_id=1760824704]
+layout_mode = 0
+offset_left = -35.54
+offset_top = -35.555
+offset_right = 36.46
+offset_bottom = 36.445
+mouse_filter = 2
+texture = ExtResource("3_i3pqv")
